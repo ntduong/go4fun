@@ -12,9 +12,10 @@ ntduong268@gmail.com
 - I'm learning and might be *wrong*, feel free to *correct* me
 - *Constructive* discussion and feedback are highly welcome!
 
-* What is Go (in one line)?
+* What is Go (non-technical)?
 
-- An [[https://go.googlesource.com/go][open source]] programming language originally developed by a team at Google
+- An *opinionated* [[https://go.googlesource.com/go][open source]] programming language originally developed by a team at Google in 2007?
+- Current status: Go 1.5, *fairly mature yet actively improved*
 - Check out [[https://golang.org][one of the most useful link]] or grok [[https://github.com/golang][source code]] (hardcore)
 - [[https://godoc.org/][Godoc]] is your friend
 - [[https://github.com/golang/go/wiki/GoUsers][Companies]] using Go in *production*: Dropbox, Heroku, Canonical, Soundcloud, Docker, Google, Facebook, Github, etc.
@@ -27,9 +28,109 @@ ntduong268@gmail.com
 - Remove the `go` directory to uninstall :D
 
 * Getting started...
+
 - For impatients: take the [[https://tour.golang.org/welcome/1][Go tour]]
 - Make sure to read [[https://golang.org/doc/code.html][this]] before going for something more serious
 .play foo.go
 - Play more at [[http://play.golang.org/][Go playground]]
 
-* How Go was born and for what?
+* How Go was born?
+
+- For a comprehensive background, see [[https://talks.golang.org/2012/splash.article][this article]] by Rob Pike
+- Anecdote: Go was conceived during 45-min waiting for a large Google build in 2007
+- [[https://xkcd.com/303/][Compiling...]]
+ 
+* And for what?
+
+- large-scale software development: large dependencies, lots of teams/programmers
+- the modern development world (multicore machines, distributed systems, web application development, cloud)
+  Eg: built-in concurrency more than just primitive mutex, lock, etc.
+- the life of programmers (e.g., happiness, productivity), not exotic fancy features (go for Haskell, Common LISP):
+  fast build, clean dependencies, gc, static type checking, etc.
+- *Do less, enable more*
+
+* What is Go (from technical perspective)?
+- compiled
+- statically typed
+- concurrent built-in
+- garbage-collected
+- curly brace C-family (not too radical to pick up), but integrate various established ideas from different languages
+- C/C++ can call Go code and vice versa, without SWIG
+- OO by composition, no inheritance and type hierarchy(more on this later)
+- great tools + standard libraries
+- great community + gocons
+- and more...
+
+* Want to know more...
+
+- Check out [[https://golang.org/doc/faq][Go FAQ]] and blog posts (okay)
+- Write programs (great...)
+- Do nothing (bad)
+
+* Typical Go usage:
+
+- writing servers (web/backend servers, etc.)
+- cmd tools
+- automated tools
+- hardware programming (e.g., gobot.io)
+- teaching about system/concurrent programming
+- writing article, blogs (e.g., Hugo), presentation (`present`)
+
+* Promising but need to improve
+
+- [[https://github.com/golang/mobile][Mobile development]]
+- Scientific computing: something like Python's numpy ecosystem (numpy/scipy/matplotlib/sklearn, etc.)
+- running in a browser: check out gopherjs (a compiler from Go to JS)
+
+* Personal takeaways (incomplete)
+
+- Simplicity
+- Readability
+- Not-so-steep learning curve (with caveat)
+- Fun
+- Helpful docs/tools/community
+
+* Too much ads, let's dive in...
+
+* Useful resources:
+
+- Go language spec/docs at golang.org
+- Effective Go at golang.org
+- Blog posts, articles, e.g., [[https://github.com/golang/go/wiki/Articles][golang wiki]]
+- Books, e.g., [[http://www.gopl.io/][The Go Programming Language]]
+
+* So, what to do next?
+- *No* to the language war
+
+- If you like and wanna try:
+  - Check out resources
+  - *Have fun writing real Go code*   
+  - Stay tuned for more go-talks
+
+- Otherwise
+- Do nothing
+- Go to 合コン
+
+* Attention, please!
+
+- Want better sharing/learning in VAJ dev-community
+- [Proposal] Weekly/monthly mini-conf on whatever geeky topics:
+  - freestyle talks on what you care, what you think cool, etc.
+  - go deep to the basic/core things
+  - NOT focus on superficial and overhyped "hot" topics*
+  - open[mind] to any background, techniques, languages, frameworks, etc.
+  - practice presentation/language skills
+  - get interactive feedback/discussion 
+  - get to know people for (more|future) collaboration, friendship
+
+* I think...
+
+Pros:
+  - more focused group than vnitc
+  - more interactive then kipalog, ktmt
+  - more fun :)
+Cons:
+  - Personal schedule, hobbies, styles
+  - I don't want to share anything...
+
+* What do you think?
