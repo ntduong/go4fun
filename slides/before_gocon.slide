@@ -50,6 +50,7 @@ ntduong268@gmail.com
 - *Do less, enable more*
 
 * What is Go (from technical perspective)?
+
 - compiled
 - statically typed
 - concurrent built-in
@@ -57,8 +58,6 @@ ntduong268@gmail.com
 - curly brace C-family (not too radical to pick up), but integrate various established ideas from different languages
 - C/C++ can call Go code and vice versa, without SWIG
 - OO by composition, no inheritance and type hierarchy(more on this later)
-- great tools + standard libraries
-- great community + gocons
 - and more...
 
 * Want to know more...
@@ -87,10 +86,64 @@ ntduong268@gmail.com
 - Simplicity
 - Readability
 - Not-so-steep learning curve (with caveat)
-- Fun
 - Helpful docs/tools/community
 
-* Too much ads, let's dive in...
+* Simplicity (for minimalists)
+
+- Canonical style, automatically enforced by `go fmt`
+- only minimal key features vs. lots of features (other languages):
+  - orthogonal feature sets enough to "cover the space"
+  - remove complicated/bug-prone ones: pointer arithmetic, inheritance, semicolon, explicit thread management
+  - add much-needed features: better memory management with GC, static type checking, interface (OO by composition)
+- high quality standard libraries with clear docs and not-too-difficult to read and understand source code
+
+* Hidden Complexity
+ 
+- But, [[https://talks.golang.org/2015/simplicity-is-complicated.slide][Simplicity is complicated]]
+- Eg: Garbage collector in concurrent system
+- Good thing: 
+  - complexity is handled by the language designers, not programmers
+  - as a programmer, we *care* and *love* easy-to-use language
+
+* Readability
+
+- Not too many ways to do the same thing (vs. Ruby, Perl, etc.)
+- Reliable code: easier to understand, debug
+- Tradeoff: fun to write  vs. less work to maintain
+
+* My favorites
+
+- No redundant variables, imports 
+  - unused things cause compile error
+- Build by composing pieces
+- Interface 
+- Static type with dynamic typing
+- Feeling safer with GC and memory management
+- go tools
+- fast compilation/execution
+- no underlying difference between methods and functions
+- function as a first class language
+- able to define methods for any types
+
+* Useful go tools
+
+- gofmt
+- go build/install/run/test/benchmark
+- goimports
+- go vet
+- go race
+- golint
+- godoc
+- pprof: profiling tool
+
+* Advanced tools for code analysis/understanding
+
+- made from standard libraries, eg., go/{token,ast,lexical...}
+  - godef: jump to the definition of constants, vars, functions
+  - go oracle, etc.
+- My recent interest, but need more time to study
+
+* Case study
 
 * Useful resources:
 
@@ -134,3 +187,12 @@ Cons:
   - I don't want to share anything...
 
 * What do you think?
+
+* Take-home messages
+
+- Go is an opinionated language with `minimalist` design:
+  - do less, enable more
+  - simplicity is best
+  - target modern large-scale software engineering problems, focus on productivity
+- Love it or hate it, know your tools and no language war
+- Look forward to better knowledge sharing in vaj-dev community 
