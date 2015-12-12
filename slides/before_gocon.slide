@@ -1,0 +1,35 @@
+Before Go(con)...
+share to learn @vnitc
+12 Dec 2015
+Tags: techtalk, vnitc, go, 2015
+
+Duong Nguyen
+ntduong268@gmail.com
+
+* Disclaimer
+
+- Personal opinions represent my *own* and not those of my employer. 
+- I'm learning and might be *wrong*, feel free to *correct* me
+- *Constructive* discussion and feedback are highly welcome!
+
+* What is Go (in one line)?
+
+- An [[https://go.googlesource.com/go][open source]] programming language originally developed by a team at Google
+- Check out [[https://golang.org][one of the most useful link]] or grok [[https://github.com/golang][source code]] (hardcore)
+- [[https://godoc.org/][Godoc]] is your friend
+- [[https://github.com/golang/go/wiki/GoUsers][Companies]] using Go in *production*: Dropbox, Heroku, Canonical, Soundcloud, Docker, Google, Facebook, Github, etc.
+
+* Simple [un]installation
+
+- See this complete [[https://golang.org/doc/install][guide]] for all support platforms 
+- For Linux, simply download and extract the archive into `/usr/local`, and
+      export PATH=$PATH:/usr/local/go/bin
+- Remove the `go` directory to uninstall :D
+
+* Getting started...
+- For impatients: take the [[https://tour.golang.org/welcome/1][Go tour]]
+- Make sure to read [[https://golang.org/doc/code.html][this]] before going for something more serious
+.play foo.go
+- Play more at [[http://play.golang.org/][Go playground]]
+
+* How Go was born and for what?
