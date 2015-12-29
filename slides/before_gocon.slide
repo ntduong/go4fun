@@ -4,7 +4,7 @@ share to learn @vnitc
 Tags: techtalk, vnitc, go, 2015
 
 Duong Nguyen
-ntduong268@gmail.com
+ntduongxyz@gmail.com
 
 * Disclaimer
 
@@ -13,34 +13,23 @@ ntduong268@gmail.com
 - *Constructive* discussion and feedback are highly welcome!
 
 * Warmp-up: A language game
-- Name a language whose name starts with a English alphabet
+
+- Name a language whose name starts with an English alphabet
 - Today: *G* for *Go*
 
 * What is Go (non-technical)?
 
-- An *opinionated* [[https://go.googlesource.com/go][open source]] programming language originally developed by a team at Google in 2007?
-- Current status: Go 1.5, *fairly mature yet actively improved*
-- Check out [[https://golang.org][one of the most useful link]] or grok [[https://github.com/golang][source code]] (hardcore)
-- [[https://godoc.org/][Godoc]] is your friend
+- An *opinionated* [[https://go.googlesource.com/go][open source]] programming language originally developed by a team at Google in 2007
+- Current status: Go 1.5, _fairly_mature_yet_actively_improved_
+- Check out [[https://golang.org][one of the most useful link]]
 - [[https://github.com/golang/go/wiki/GoUsers][Companies]] using Go in *production*: Dropbox, Heroku, Canonical, Soundcloud, Docker, Google, Facebook, Github, etc.
 
 * Simple [un]installation
 
-- See this complete [[https://golang.org/doc/install][guide]] for all support platforms 
+- See this complete [[https://golang.org/doc/install][guide]] for all supported platforms 
 - For Linux, simply download and extract the archive into `/usr/local`, and
       export PATH=$PATH:/usr/local/go/bin
-- Remove the `go` directory to uninstall :D
-
-* Getting started...
-
-- For impatients: take the [[https://tour.golang.org/welcome/1][Go tour]]
-- Make sure to read [[https://golang.org/doc/code.html][this]] before going for something more serious
-- Play more at [[http://play.golang.org/][Go playground]]
-
-* Helloworld routine
-
-.play foo.go
-
+- To uninstall remove the `go` directory :D
 
 * How Go was born?
 
@@ -50,14 +39,14 @@ ntduong268@gmail.com
  
 * And for what?
 
-- large-scale software development: large dependencies, lots of teams/programmers
-- the modern development world (multicore machines, distributed systems, web application development, cloud)
-  Eg: built-in concurrency more than just primitive mutex, lock, etc.
-- the life of programmers (e.g., happiness, productivity), not exotic fancy features (go for Haskell, Common LISP):
+- Large-scale software development: large dependencies, lots of teams/programmers
+- The modern development world (multicore machines, distributed systems, web application development, cloud):
+  built-in concurrency more than just primitive mutex, lock, etc.
+- The life of programmers (e.g., happiness, productivity), not exotic fancy features (go for Haskell, LISP):
   fast build, clean dependencies, gc, static type checking, etc.
-- *Do less, enable more*
+- *Do*less,*enable*more*
 
-* Typical Go usage:
+* Typical Go usage
 
 - writing servers (web/backend servers, etc.)
 - cmd tools
@@ -69,18 +58,26 @@ ntduong268@gmail.com
 * Promising but need to improve
 
 - [[https://github.com/golang/mobile][Mobile development]]
-- Scientific computing: something like Python's numpy ecosystem (numpy/scipy/matplotlib/sklearn, etc.)
-- running in a browser: check out gopherjs (a compiler from Go to JS)
+- [[https://github.com/gonum][Scientific computing]]: something like Python's numpy ecosystem (numpy/scipy/matplotlib/sklearn, etc.)
+- Running in a browser: check out [[https://github.com/gopherjs/][gopherjs]] (a compiler from Go to JS)
+
+* Getting started
+
+- For impatients, take the [[https://tour.golang.org/welcome/1][Go tour]]
+- Make sure to read [[https://golang.org/doc/code.html][this]] before going for something more serious
+- Play more at [[http://play.golang.org/][Go playground]]
+
+* Hello world
+
+.play foo.go
 
 * What is Go (from technical perspective)?
 
 - compiled
 - statically typed
-- concurrent built-in
+- concurrency built-in
 - garbage-collected
 - curly brace C-family (not too radical to pick up), but integrate various established ideas from different languages
-- C/C++ can call Go code and vice versa, without SWIG
-- OO by composition, no inheritance and type hierarchy(more on this later)
 - and more...
 
 * Go != C
@@ -105,9 +102,11 @@ ntduong268@gmail.com
 
 - Canonical style, automatically enforced by `go fmt`
 - only minimal key features vs. lots of features (other languages):
+
   - orthogonal feature sets enough to "cover the space"
   - remove complicated/bug-prone ones: pointer arithmetic, inheritance, semicolon, explicit thread management
   - add much-needed features: better memory management with GC, static type checking, interface (OO by composition)
+
 - high quality standard libraries with clear docs and not-too-difficult to read and understand source code
 
 * Hidden Complexity
@@ -127,17 +126,19 @@ ntduong268@gmail.com
 * My favorites
 
 - No redundant variables, imports 
+
   - unused things cause compile error
   - fast compilation/execution
+
 - [un]export by [lower|upper]case
-- Build by composing pieces
 - Composition over inheritance
-- Static type yet dynamic typing
-- Safer with defer, GC
+- defer, panic and recover
+- GC
+- [[https://blog.golang.org/first-class-functions-in-go-and-new-go][first-class functions]]
+- perfect to define methods for any types
 - go tools
-- function as a first class language (*)
-  - method is essentially function 
-  - able to define methods for any types
+- interact with C/C++ without SWIG
+- and more...
 
 * Useful go tools
 
@@ -149,71 +150,56 @@ ntduong268@gmail.com
 - golint
 - godoc
 - pprof: profiling tool
+- godef, gorename, oracle: refactoring and static analysis tools
 
-* Advanced tools for code analysis/understanding
+* Case study (if time allows?)
 
-- made from standard libraries, eg., go/{token,ast,lexical...}
-  - godef: jump to the definition of constants, vars, functions
-  - go oracle, etc.
-- My recent interest, but need more time to study
+- How to structure a project in Go
+- How Go solves dependency problem?
+- Function calls, heap, stack and memory management with GC
+  
+  Why it is ok to take the address of stack variables in Go?
+  Inlining to reduce function call overhead, etc.
 
-* Case study (have time?)
-  - How to structure a project in Go
-  - How Go solve dependency problem?
-  - Function call, heap, stack and memory management with GC
-    - Why it is ok to take the address of stack variables in Go?
-    - Inlining to reduce function call overhead
-  - OO style in Go (future topic)
-  - Concurrency is not Parallesism (future topic)
+- OOP in Go
+- Concurrency is not Parallesism
 
 * Useful resources:
 
-- Go language spec/docs at golang.org
-- Effective Go at golang.org
+- Go language spec/docs at https://golang.org
+  
+  Effective Go at https://golang.org
+  
 - Blog posts, articles, e.g., [[https://github.com/golang/go/wiki/Articles][golang wiki]]
 - Books, e.g., [[http://www.gopl.io/][The Go Programming Language]]
 
-* So, what to do next?
-- *No* to the language war
+* So, what's next?
 
-- If you like and wanna try:
-  - Check out resources
-  - *Have fun writing real Go code*   
-  - Stay tuned for more go-talks
+- *NO* to the language war
+- *Have*fun*writing*real*Go*code*   
+- Check out resources
+- Grok [[https://github.com/golang][source code]] (hardcore) and [[https://godoc.org/][Godoc]] is your friend.
+- Watch Go-related talks on e.g. Youtube
+- Go to 合コン :D...
 
-- Otherwise
-- Do nothing
-- Go to 合コン
+* Take-home messages
+
+- Go is an opinionated language for real-world software engineering 
+
+  - do less, enable more
+  - simplicity is the best (but hard)
+  - tailored to modern large-scale software development, with productivity in mind
+
+- Love it or hate it, know your tools and no language war
+- Share to learn
 
 * Attention, please!
 
 - Want better sharing/learning in VAJ dev-community
-- [Proposal] Weekly/monthly mini-conf on whatever geeky topics:
+- *[Proposal]* Monthly lightning talks on whatever geeky topics:
+
   - freestyle talks on what you care, what you think cool, etc.
-  - go deep to the basic/core things
-  - NOT focus on superficial and overhyped "hot" topics*
   - open[mind] to any background, techniques, languages, frameworks, etc.
   - practice presentation/language skills
   - get interactive feedback/discussion 
   - get to know people for (more|future) collaboration, friendship
-
-* I think...
-
-Pros:
-  - more focused group than vnitc
-  - more interactive then kipalog, ktmt
-  - more fun :)
-Cons:
-  - Personal schedule, hobbies, styles
-  - I don't want to share anything...
-
-* What do you think?
-
-* Take-home messages
-
-- Go is an opinionated language with `minimalist` design:
-  - do less, enable more
-  - simplicity is best
-  - target modern large-scale software engineering problems, focus on productivity
-- Love it or hate it, know your tools and no language war
-- Look forward to better knowledge sharing in vaj-dev community 
